@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MercadoLibre</title>
+    <link href="./css/variables.css" rel="stylesheet" type="text/css">
+    <link href="./css/style.css" rel="stylesheet" type="text/css">
+    <link href="./css/grid.css" rel="stylesheet" type="text/css">
+    <link href="./css/componets.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <header>
+        <nav class="nav">
+            <div class="contenedor grid col-12">
+                <a href="index.html" class="container_logo">
+                    <img id="logo"  src="./assets/logo.png" alt="logo mercadolibre">
+                </a>
+                <form class="form span-9 md-span-11" novalidate>
+                    <input class="input" id="input-search" type="text" placeholder="Nunca dejes de buscar">
+                    <button class="button button-search">
+                        <img class="input-search icon" src="./assets/icon_search.png" alt="Buscar">
+                    </button>
+                </form>
+            </div>
+        </nav>
+    </header>
+    <div class="contenedor grid col-12 sm-col-1">
+        <ol class="breadcrumb" id="categoriesContainer">
+        </ol>
+    </div>
+    <div class="contenedor grid col-12 sm-col-1">
+        <div class="card detail-producto col-10">
+            <div class="img-detail-producto span-7 med-span-5">
+                <img id="image"  alt="Producto">
+            </div>
+            <div class="detail-description-producto span-3 med-span-5">
+                <h6><span id="condition"></span> - <span id="sold_quantity"></span> vendidos</h6>
+                <h4 class="detail-title-producto" id="title"></h4>
+                <div class="container-price">
+                    <h4 class="detail-title-precio">$ <span id="price"></span></h4>
+                    <h4 class="detail-title-decimals" > <span id="decimals"></span></h4>
+                </div>
+
+                <button class="boton">Comprar</button>
+            </div>
+            <div class="detail-description-title-producto span-10">
+                <h3> Descripcion del producto</h3>
+            </div>
+            <div class="detail-description-texts-producto span-8">
+                <p id="description"></p>
+            </div>
+        </div>
+    </div>
+    <script src="detail-product.js"></script>
+</body>
+
+</html>
+
+</html>

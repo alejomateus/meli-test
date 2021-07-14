@@ -1,0 +1,68 @@
+{
+	"info": {
+		"_postman_id": "51b0b169-8119-4f35-9572-4a1319f7d767",
+		"name": "MELI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET iTEMS",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "meliKey",
+						"value": "m3l1K3y2021*?",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:4004/api/items?searchText=xioami",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4004",
+					"path": [
+						"api",
+						"items"
+					],
+					"query": [
+						{
+							"key": "searchText",
+							"value": "xioami"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET iTEM",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "meliKey",
+						"value": "m3l1K3y2021*?",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:4004/api/items/MLA926933458",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4004",
+					"path": [
+						"api",
+						"items",
+						"MLA926933458"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,13 @@
+:root {
+    --fuente          : "Open Sans", sans-serif;
+    --fondo           : #f2f2f2;
+    --ancho-contenedor: 1200px;
+    --color-placelholder: #aeaeae;
+    --color-card: #fff;
+    --color-box-shadow: rgba(221, 221, 211, 0.3);
+    --color-primary: #fff600;
+    --color-btn-primary: #3483fa;
+    --color-btn-primary-hover: #3483fa;
+    --color-divider-category :#6c757d;
+    --color-text-category :#999999;
+}

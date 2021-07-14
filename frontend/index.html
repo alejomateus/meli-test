@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MercadoLibre</title>
+    <link href="./css/variables.css" rel="stylesheet" type="text/css">
+    <link href="./css/style.css" rel="stylesheet" type="text/css">
+    <link href="./css/grid.css" rel="stylesheet" type="text/css">
+    <link href="./css/componets.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <header>
+        <nav class="nav">
+            <div class="contenedor grid col-12">
+                <img id="logo" src="./assets/logo.png" alt="logo mercadolibre">
+                <form class="form span-9 md-span-11" novalidate>
+                    <input class="input" id="input-search" type="text" placeholder="Nunca dejes de buscar">
+                    <button class="button button-search">
+                        <img class="input-search icon" src="./assets/icon_search.png" alt="Buscar">
+                    </button>
+                </form>
+            </div>
+        </nav>
+    </header>
+    <div class="contenedor grid col-12 sm-col-1">
+        <ol class="breadcrumb" id="categoriesContainer">
+        </ol>
+    </div>
+    <div class="contenedor grid col-12 sm-col-1" id="productsContainer">
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>

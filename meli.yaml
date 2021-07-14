@@ -1,0 +1,154 @@
+swagger: "2.0"
+info:
+  description: "Mercado Libre "
+  version: "1.0.0"
+  title: "Buscador de productos"
+  contact:
+    email: "alejo.mateus.ud@gmail.com"
+tags:
+- name: "items"
+  description: "Operaciones sobre los productos guardados "
+schemes:
+- "http"
+paths:
+  /api/items:
+    get:
+      tags:
+      - "comments"
+      summary: "Obtener un listado de productos"
+      operationId: "getItems"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+        - name: "searchText"
+          in: "query"
+          description: "texto de busqueda"
+          required: true
+          type: "string"
+      responses:
+        "200":
+          description: "Data"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/items"
+        "500":
+          description: "Invalid request"
+  /api/items/{id}:
+    get:
+      tags:
+      - "comments"
+      summary: "Obtener un detalle del producto"
+      operationId: "getItem"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+        - name: "id"
+          in: "path"
+          description: "id del producto"
+          required: true
+          type: "string"
+      responses:
+        "200":
+          description: "Data"
+          schema:
+            $ref: "#/definitions/item"
+        "500":
+          description: "Invalid request"
+definitions:
+  author:
+    type: "object"
+    properties:
+      name:
+        type: "string"
+      lastname:
+        type: "string"
+  price:
+    type: "object"
+    properties:
+      currency: 
+        type: "string"
+      amount: 
+        type: "integer"
+        format: "int64"
+      decimals: 
+        type: "integer"
+        format: "int64"
+  items:
+    type: "object"
+    properties:
+      statusCode:
+        type: "integer"
+        format: "int64"
+      message:
+        type: "string"
+      data:
+        type: "object"
+        properties:
+          autor:
+            type: "object"
+            $ref: "#/definitions/author"
+          categories:
+            type: "array"
+            items:
+              type: "string"
+          items: 
+            type: "array"
+            items:
+              type: "object"
+              properties:
+                id:
+                  type: "integer"
+                  format: "int64"
+                title:
+                  type: "string"
+                price:
+                  type: "object"
+                  $ref: "#/definitions/price"
+                picture:
+                  type: "string"
+                condition:
+                  type: "string"
+                free_shipping:
+                  type: "boolean"
+  item:
+    type: "object"
+    properties:
+      statusCode:
+        type: "integer"
+        format: "int64"
+      message:
+        type: "string"
+      data:
+        type: "object"
+        properties:
+          autor:
+            type: "object"
+            $ref: "#/definitions/author"
+          item: 
+            type: "object"
+            properties:
+              id:
+                type: "integer"
+                format: "int64"
+              title:
+                type: "string"
+              price:
+                type: "object"
+                $ref: "#/definitions/price"
+              picture:
+                type: "string"
+              condition:
+                type: "string"
+              free_shipping:
+                type: "boolean"
+              sold_quantity:
+                type: "integer"
+                format: "int64"
+              description:
+                type: "string"
+  
